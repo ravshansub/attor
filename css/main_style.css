@@ -539,9 +539,16 @@
     .portfolio-item-2,
     .portfolio-item-3,
     .portfolio-item-4 {
-        position: static;
+        position: relative;
         align-items: center;
     }
+    .portfolio-item-4{
+        left: 0;
+
+    }
+}
+
+
     /* Blog section */
     .blog {
         padding: 1.5rem 0;
