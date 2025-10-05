@@ -533,6 +533,10 @@
         padding-left: 0;
     }
 
+    .client-item__info {
+        padding-left: 0;
+    }
+
     /* Portfolio section */
     .portfolio {
         padding: 1.5rem 0;
