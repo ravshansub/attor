@@ -144,6 +144,7 @@
     text-align: center;
     box-sizing: border-box;
     vertical-align: bottom;
+    transition: all 0.5s ease;
 }
 
 
@@ -251,11 +252,13 @@
 /* Portfolio section style */
 .portfolio {
     padding: 9.375rem 0;
+
 }
 
 .portfolio-filters {
     list-style: none;
     padding-left: 0;
+    
 }
 
 .portfolio-filters li {
@@ -285,7 +288,9 @@
     width: 50%;
     padding: 0.625rem;
     box-sizing: border-box;
+
 }
+
 
 .portfolio-item__image{
     width: 100%;
@@ -328,10 +333,10 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(19, 69,230,0.85);
-    visibility: hidden;
     cursor: pointer;
     z-index: 1;
+    transition: all 0.4s ease 0s;
+
 }
 
 .portfolio-item__info {
@@ -339,8 +344,9 @@
     bottom: 2.75rem;
     left: 5rem;
     color: white;
-    visibility: hidden;
+    opacity: 0;
     z-index: 1;
+    transition: all 0.4s ease 0s;
 }
 
 .portfolio-item__info a{
@@ -352,12 +358,15 @@
     top: 1.25rem;
     left: 1.25rem;
     visibility: visible;
+    background-color: rgba(19, 69,230,0.85);
+
 }
 
 .portfolio-item:hover .portfolio-item__info{
     left: 3.75rem;
     bottom: 1.5rem;
     visibility: visible;
+    opacity: 1;
 }
 
 /* Blog */
@@ -367,6 +376,7 @@
 }
 .blog-item {
     display: inline-block;
+    overflow: hidden;
     width: 30%;
     margin-right: 3%;
     box-sizing: border-box;
@@ -380,20 +390,36 @@
     background-color: white;
 }
 
-.blog-item img{
+.blog-item__image {
+    overflow: hidden;
+
+}
+
+.blog-item__image img {
+    transition: all 5s ease 0s;
+    vertical-align: middle;
     width: 100%;
+}
+
+.blog-item:hover .blog-item__image img{
+    transform: scale(1.2);
 }
 
 .blog-item__info {
     background-color: #f8faff;
     padding: 1.875rem;
     color: #797979;
+    
+    
 }
+
+    
 
 .blog-item__main-info span {
     font-size: 0.875rem;
     margin-right: 1.875rem;
     font-weight: normal;
+
 }
 
 .blog-item__main-info i {
@@ -434,10 +460,13 @@
     height: 4px;
     background: linear-gradient(to right, #1345e6 0%, #ed239f 100%);
     vertical-align: middle;
+    transition: all 2s ease 0s;
+
 }
 
 .blog-item:hover .no-blur-line {
     background: linear-gradient(to left, #1345e6 0%, #ed239f 100%);
+    
 }
 
 .partners {
