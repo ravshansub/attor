@@ -9,25 +9,25 @@
     min-height: 400px;
     background-origin: border-box;
 
+
 }
 
 .main-section {
     padding: 6.25rem 1.875rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
 }
 
-.main-section > div {
-    width: 50%;
-    float: left;
 
-}
 .main-section img {
     width: 400px;
 
 }
 
-.main-section__image {
-    text-align: right;
-    vertical-align: top ;
+.main-section__image{
+    transform: translate(0px, 2px) 
+
 }
 .main-section__welcome {
     font-size: 1.25rem;
@@ -73,10 +73,11 @@
 /* Statistics section */
 .statistics {
     padding-top: 4.6875rem;
+    display: flex;
 }
 
 .statistics__item {
-    display: inline-block;
+    
     width: 150px;
     background: #f8faff;
     text-align: center;
@@ -106,16 +107,17 @@
 /* About me section */
 .about-me {
     padding: 6.25rem 0;
+    display: flex;
+    align-items: center;
 }
 
 .about-me > div {
-    width: 50%;
-    float: left;
+    flex: 1;
 }
 
-.about-me p{
+/* .about-me p{
     text-indent: 2.5rem;
-}
+} */
 
 .about-me__description {
     font-size: 0.875rem;
@@ -134,9 +136,13 @@
     padding-top: 7.5rem;
 }
 
+.services__cards {
+    display: flex;
+    justify-content: space-between;
+}
+
 .service-card {
-    display: inline-block;
-    width: 30%;
+
     height: 400px;
     padding: 3.75rem 1.875rem;
     background-color: #f8faff;
@@ -210,10 +216,13 @@
     border-radius: 5%;
 }
 
+.client-item {
+    display: flex;
+    align-items: center;
+}
+
 .client-item > div {
-    width: 50%;
-    float: left;
-    box-sizing: border-box;
+    flex: 1;
 }
 
 .client-item__name {
@@ -222,7 +231,6 @@
 }
 
 .client-item__info {
-    padding-top: 3.125rem;
     padding-left: 3.125rem;
 }
 
@@ -297,7 +305,7 @@
 }
 
 .portfolio-item-1 {
-    padding-left: 0;
+    padding-left: 0.625rem;
 }
 
 #portfolio-item-1 {
@@ -374,10 +382,14 @@
 .blog {
     padding-top: 0rem;
 }
+
+.blog-items {
+    display: flex;
+    justify-content: space-between;
+}
+
 .blog-item {
-    display: inline-block;
     overflow: hidden;
-    width: 30%;
     margin-right: 3%;
     box-sizing: border-box;
 }
@@ -471,11 +483,12 @@
 
 .partners {
     padding-top: 6.25rem;
-    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
 }
 
 .partner {
-    display: inline-block;
     padding: 0 2.5rem;
     vertical-align: middle;
 }
@@ -485,16 +498,14 @@
 }
 
 .bvlgari img{
-    padding-top: 0.32rem;
     width: 250px;
 }
 
 .chanel img{
-    padding-top: 0.32rem;
     width: 150px;
 }
+
 .tomford img{
-    
     width: 150px;
 }
 
@@ -511,7 +522,8 @@
     /* Section */
     .statistics {
         padding-top: 3rem;
-        text-align: center
+        text-align: center;
+        justify-content: center;
     }
 
     /* About me section */
@@ -531,14 +543,21 @@
         padding: 1.5rem 0;  
     }
 
+    .services__cards {
+        flex-wrap: wrap;
+    }
     .service-card {
-        width: 45%;
+        flex-basis: 46%;
         margin-bottom: 1.5rem;
     }
 
     /* Clients */
     .clients {
         padding: 1.25rem 0;
+    }
+
+    .client-item {
+        flex-direction: column;
     }
     .client-item > div {
         width: 100%;
@@ -553,12 +572,18 @@
         padding-left: 0;
     }
 
+
         /* Blog section */
     .blog {
         padding: 1.5rem 0;
     }
+
+    .blog-items {
+        flex-wrap: wrap;
+    }
+
     .blog-item {
-        width: 45%;
+        flex-basis: 46%;
         margin-right: 0;
         margin-bottom: 1.25rem;
     }
@@ -566,9 +591,9 @@
         /* Partners section */
     .partners {
         padding: 1.5rem 0;
+        flex-direction: column;
     }
     .partner {
-        display: block;
         padding: 0;
         text-align: center;
         margin-bottom: 0.625rem;
@@ -592,6 +617,10 @@
     }
 
     /* Statistics section */
+    .statistics {
+        flex-direction: column;
+    }
+
     .statistics__item {
         width: 100%;
         margin-bottom: 1.25rem;
@@ -605,7 +634,7 @@
 
 
     .service-card {
-        width: 100%;
+        flex-basis: 100%;
         margin-right: 0;
         margin-bottom: 1.25rem;
     }
@@ -616,9 +645,18 @@
         padding: 1.5rem 0;
     }
 
-    .portfolio-item {
+    .portfolio-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .portfolio-items > div {
+        flex: 1;
         width: 100%;
     }
+
     .portfolio-item-1,
     .portfolio-item-2,
     .portfolio-item-3,
@@ -629,12 +667,14 @@
     .portfolio-item-4{
         left: 0;
 
-    }
+    } 
 
 
     /* Blog section */
+    .blog-items {
+        flex-direction: column;
+    }
     .blog-item {
-        width: 100%;
         margin-right: 0;
         margin-bottom: 1.25rem;
     }
