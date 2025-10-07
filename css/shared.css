@@ -217,6 +217,10 @@
 
 
 /*Core styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Roboto, sans-serif;
     caret-color: transparent;
